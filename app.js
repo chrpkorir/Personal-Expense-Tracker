@@ -8,6 +8,7 @@ const totalExpenses = document.getElementById('totalExpenses')
 const balance = document.getElementById('balance')
 const convertCurrency = document.getElementById('convertCurrency')
 
+
 //Update the Interface
 function updateInterface(){
     transactionTable.innerHTML = '';
@@ -70,14 +71,18 @@ function deleteTransaction(index){
 convertCurrency.addEventListener('click', async() => {
     try{
     const response = await
-    fetch(URL)// change to base currency
+    fetch('https://v6.exchangerate-api.com/v6/c727415aa27c6cb419a7b0e5/latest/KES');// change to base currency
+    if (!response.ok){
+        throw new Error(`API error: ${response.status}`);
+        }
     const data = await response.json()
-    const usdRate = data.rates.USD;
+    const usdRate = data.conversion_rates.USD;
     const currentBalance = parseFloat(balance.textContent);
     alert(`Balance in USD: ${(currentBalance * usdRate).toFixed(2)}`); 
     }
     catch (error){
-        alert('Failed to fetch currency rates')
+        //alert('Failed to fetch currency rates')
+        console.error('Error fetching exchange rate', error)
     }
 });
 
