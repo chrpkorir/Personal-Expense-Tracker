@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Personal Expense Tracker</h1>
+    <form id="transactionForm">
+        <input type="text" id="description" placeholder="Description" required>
+        <input type="number" id="amount" placeholder="Amount" required>
+        <select id="type">
+            <option value="income">Income</option>
+            <option value="expense">Expense</option>
+        </select>
+        <button type="submit">Add Transaction</button>
+    </form>
+
+    <div class="summary">
+        <h2>Summary</h2>
+        <p>Total Income: <span id="totalIncome">0</span></p>
+        <p>Total Expenses: <span id="totalExpenses">0</span></p>
+        <p>Balance: <span id="balance">0</span></p>
+        <button id="converCurrency">Convert to USD</button>
+
+    </div>
+    <table>
+        <thead>
+            <th>Description</th>
+            <th>Amount</th>
+            <th>Type</th>
+            <th>Action</th>
+        </thead>
+        <tbody id="transactionTable">
+
+        </tbody>
+    </table>
+    <script src="app.js"></script>
+</body>
+</html>
