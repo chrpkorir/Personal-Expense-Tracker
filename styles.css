@@ -1,26 +1,26 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif; /* Main font used */
     margin: 20px;
     background-color: #f4f4f4;
     color: #333;
-    transition: all 0.3s ease-in-out;
+    
 }
 .container {
     max-width: 900px;
     margin: 0px;
-    text-align: center;
+    text-align: center; /* positions items in the center */
 }
 h1, h2 {
-    text-align: center;
+    text-align: center; /* Pushed the headers to center position */
     font-family: 'Georgia', serif;
     color: #004d66;
 }
 form {
     margin-bottom: 20px;
-    display: flex;
-    gap: 10px;
+    display: flex; /* Display adjusts according to the items in form */
+    gap: 10px; 
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center; 
 }
 input, select, button{
     padding: 10px;
@@ -37,7 +37,6 @@ button{
     color: white;
     cursor: pointer;
     border: none;
-    transition: backgrond-color 0.3s ease;
 }
 button:hover {
     background-color: #004d66;
@@ -45,7 +44,7 @@ button:hover {
 .summary {
     background-color: #fff;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 10px; /* Makes the corners a bit round */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin: 20px auto;
     max-width: 80%;
@@ -82,7 +81,7 @@ td {
 tr:hover {
     background-color: #f4f4f4;
 }
-td button {
+#deletebutton {
     background-color: red;
     color: white;
     border: none;
@@ -91,6 +90,6 @@ td button {
     font-size: 14px;
     cursor: pointer;
 }
-td button:hover {
+#deletebutton:hover {
     background-color: darkred;
 }

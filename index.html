@@ -9,20 +9,24 @@
 <body>
     <h1>Personal Expense Tracker</h1>
     <form id="transactionForm">
+        <input type="hidden" id="transactIndex" value="-1">
         <input type="text" id="description" placeholder="Description" required>
         <input type="number" id="amount" placeholder="Amount" required>
         <select id="type">
-            <option value="income">Income</option>
             <option value="expense">Expense</option>
+            <option value="income">Income</option>
         </select>
         <button type="submit">Add Transaction</button>
     </form>
 
     <div class="summary">
         <h2>Summary</h2>
-        <p>Total Income: <span id="totalIncome">0</span></p>
-        <p>Total Expenses: <span id="totalExpenses">0</span></p>
+        <p>Total Income: <span id="tIncome">0</span></p>
+        <p>Total Expenses: <span id="tExpenses">0</span></p>
         <p>Balance: <span id="balance">0</span></p>
+        <select id="selectCurrency">
+            <option value=""disable selected >Choose Currency </option>
+        </select>
         <button id="convertCurrency">Convert to USD</button>
 
     </div>
@@ -31,6 +35,7 @@
             <th>Description</th>
             <th>Amount</th>
             <th>Type</th>
+            <th>Action</th>
             <th>Action</th>
         </thead>
         <tbody id="transactionTable">
