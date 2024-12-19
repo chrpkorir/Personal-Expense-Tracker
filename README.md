@@ -9,7 +9,7 @@
  - **Persistent storage** : Save transactions i LocalStorage to ensure data is retained after refreshing the browser.
  - **Transaction History** : View and delete individual transactions.
  - **Currency Conversion** : Convert the balance into another currency using [ExchangeRate API](https://app.exchangerate-api.com/)
-hnologies Used**
+## **Technologies Used**
  - **HTML**: Structuring the web application.
  - **CSS**: Styling and ensuring responsiveness.
  - **JavaScript** : Adding interactivity and handling application logic.
