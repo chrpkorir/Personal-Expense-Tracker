@@ -1,4 +1,5 @@
 # **Personal Expense Tracker**
+- The [live link](https://chrpkorir.github.io/Personal-Expense-Tracker)
  This is a web-based application that helps users to manage their finances by tracking income and expenses. It demonstrates the use of HTML, CSS, JavaSCript, and APIs for building a functional, interactive web apps
 
  ---
